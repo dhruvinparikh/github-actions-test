@@ -27,9 +27,17 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn predeploy
-    # - run: git config user.email imsient93@gmail.com
-    # - run: git config user.name dhruvinparikh93
-    # - run: yarn deploy
-    - run: ls .
+    - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.2.0 # This step installs the ssh client into the workflow run. There's many options available for this on the action marketplace.
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+    - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3-test
+        with:
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: build
+          CLEAN: true
+          SSH: true # SSH must be set to true so the deploy action knows which protocol to deploy with.
     env:
         CI: true
