@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f361e03.chunk.css",
-    "main.js": "/static/js/main.21258acf.chunk.js",
-    "main.js.map": "/static/js/main.21258acf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a8bf71f9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a8bf71f9.js.map",
-    "static/js/2.d5e7b584.chunk.js": "/static/js/2.d5e7b584.chunk.js",
-    "static/js/2.d5e7b584.chunk.js.map": "/static/js/2.d5e7b584.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.03cf29bd3257a55d493c4f34e0e44e2c.js": "/precache-manifest.03cf29bd3257a55d493c4f34e0e44e2c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.d5e7b584.chunk.js.LICENSE.txt": "/static/js/2.d5e7b584.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/github-actions-test/static/css/main.5f361e03.chunk.css",
+    "main.js": "/github-actions-test/static/js/main.67d49d8b.chunk.js",
+    "main.js.map": "/github-actions-test/static/js/main.67d49d8b.chunk.js.map",
+    "runtime-main.js": "/github-actions-test/static/js/runtime-main.4d358ded.js",
+    "runtime-main.js.map": "/github-actions-test/static/js/runtime-main.4d358ded.js.map",
+    "static/js/2.d5e7b584.chunk.js": "/github-actions-test/static/js/2.d5e7b584.chunk.js",
+    "static/js/2.d5e7b584.chunk.js.map": "/github-actions-test/static/js/2.d5e7b584.chunk.js.map",
+    "index.html": "/github-actions-test/index.html",
+    "precache-manifest.5ed94120587a8123035d5e3c04c11b30.js": "/github-actions-test/precache-manifest.5ed94120587a8123035d5e3c04c11b30.js",
+    "service-worker.js": "/github-actions-test/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/github-actions-test/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.d5e7b584.chunk.js.LICENSE.txt": "/github-actions-test/static/js/2.d5e7b584.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/github-actions-test/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a8bf71f9.js",
+    "static/js/runtime-main.4d358ded.js",
     "static/js/2.d5e7b584.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.21258acf.chunk.js"
+    "static/js/main.67d49d8b.chunk.js"
   ]
 }
