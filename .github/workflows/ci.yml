@@ -27,10 +27,8 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn predeploy
-    - name: Deploy
-    uses: peaceiris/actions-gh-pages@v3
-    with:
-      personal_token: ${{ secrets.ACCESS_TOKEN }}
-      publish_dir: ./build
-      env:
+    - run: git config user.email imsient93@gmail.com
+    - run: git config user.name dhruvinparikh93
+    - run: yarn deploy
+    env:
         CI: true
