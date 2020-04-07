@@ -27,8 +27,9 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn predeploy
-    - run: git config user.email imsient93@gmail.com
-    - run: git config user.name dhruvinparikh93
-    - run: yarn deploy
+    # - run: git config user.email imsient93@gmail.com
+    # - run: git config user.name dhruvinparikh93
+    # - run: yarn deploy
+    - run: ls .
     env:
         CI: true
