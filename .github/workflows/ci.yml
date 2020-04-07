@@ -33,8 +33,5 @@ jobs:
     - name: predeploy
     - run: |
         yarn predeploy
-    - name: deploy
-    - run: |
-        yarn deploy
     env:
         CI: true
