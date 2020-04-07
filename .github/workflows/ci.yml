@@ -27,5 +27,6 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn predeploy
+    - run: yarn deploy
       env:
         CI: true
