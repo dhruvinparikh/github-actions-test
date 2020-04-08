@@ -4,11 +4,11 @@ on:
     branches:
       - master
   pull_request:
-    branches: 
+    branches:
       - master
 
 jobs:
-  install:
+  deploy:
     runs-on: ubuntu-latest
 
     strategy:
@@ -27,14 +27,6 @@ jobs:
           yarn test
           yarn build
 
-  deploy:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.17.0]
-
-    steps:
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.2.0 # This step installs the ssh client into the workflow run. There's many options available for this on the action marketplace.
         with:
