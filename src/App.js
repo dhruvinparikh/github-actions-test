@@ -1,5 +1,5 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+    Learn React
         </a>
         <p>Start adding here</p>
         <p>More data</p>
