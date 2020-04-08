@@ -53,7 +53,8 @@
   "lint-staged": {
     "*.js": [
       "yarn prettier",
-      "yarn fix"
+      "yarn fix",
+      "git add"
     ]
   }
 }
