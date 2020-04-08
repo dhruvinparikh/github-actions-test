@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/**/*.js",
-    "fix" : "yarn lint --fix"
+    "fix": "yarn lint --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
