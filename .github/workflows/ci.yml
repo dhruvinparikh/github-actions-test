@@ -41,6 +41,12 @@ jobs:
           FOLDER: build
           CLEAN: true
           SSH: true # SSH must be set to true so the deploy action knows which protocol to deploy with.
+
+      - name : Make build in github-actions-test
+        run : |
+          mkdir github-actions-test
+          mv ./build/* ./github-actions-test/
+          mv ./build/github-actions-test/index.html ./build/
       
       - name: Deploy to docker
         uses: mr-smithers-excellent/docker-build-push@v2
