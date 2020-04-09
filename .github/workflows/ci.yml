@@ -46,6 +46,7 @@ jobs:
         run : |
           mkdir github-actions-test
           mv ./build/* ./github-actions-test/
+          mv ./github-actions-test ./build/
           mv ./build/github-actions-test/index.html ./build/
       
       - name: Deploy to docker
