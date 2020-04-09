@@ -37,6 +37,8 @@ $ docker push docker.io/dhruvingbc/github-actions-test:latest
 $ docker run --name myname -p 8080:5000 --rm dhruvingbc/github-actions-test:latest
 ```
 
+Open http://localhost:8080 in the browser.
+
 #### References
 - https://create-react-app.dev/docs/deployment#github-pages
 - https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions
