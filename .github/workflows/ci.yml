@@ -49,6 +49,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: deps
+      - shell : bash
         run: |
           cp -aR deps/node_modules .
 
