@@ -8,7 +8,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,14 +18,29 @@ jobs:
     steps:
       - name: Checkout 🛎️ Use Node.js ${{ matrix.node-version }}
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Install and Test 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
           npm install
           npm run lint
           npm run test
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    strategy:
+      matrix:
+        node-version: [10.17.0]
+
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout 🛎️ Use Node.js ${{ matrix.node-version }}
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
           npm run build
 
       - name: Install SSH Client 🔑
@@ -53,7 +68,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v2
         with:
           image: dhruvingbc/github-actions-test
-          tag: node-0.0.${GITHUB_RUN_ID}
+          tag: node-0.0.${GITHUB_RUN_NUMBER}
           registry: docker.io
           dockerfile: "./Docker/Dockerfile"
           username: ${{ secrets.DOCKER_USERNAME }}
