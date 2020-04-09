@@ -1,7 +1,7 @@
 FROM node:latest
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Expose port for service
 EXPOSE 5000
@@ -9,11 +9,11 @@ EXPOSE 5000
 # Install and configure `serve`.
 RUN npm install -g serve
 
-# Copy source code to image
-COPY . .
+# Copy build
+COPY build build
 
-# Install dependencies
-RUN npm install
+# COPY start
+COPY start .
 
 # Build app and start server from script
-CMD ["/usr/src/app/run"]
+CMD ["/app/start"]

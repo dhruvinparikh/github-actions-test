@@ -13,7 +13,7 @@ ssh-keygen -t rsa -b 4096 -C "youremailhere@example.com" -N ""
 ## Build docker image
 
 ```bash
-$ docker build -t github-actions-test-image .
+$ docker build -t github-actions-test-image -f "./Docker/Dockerfile" .
 ```
 
 ## Run docker image
@@ -26,3 +26,6 @@ $ docker run --name myname -p 8080:5000 --rm github-actions-test-image:latest
 https://create-react-app.dev/docs/deployment#github-pages
 https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions
 https://github.com/marketplace/actions/deploy-to-github-pages
+https://github.com/eslint/eslint
+https://docs.docker.com/engine/reference/builder/
+https://github.com/typicode/husky
