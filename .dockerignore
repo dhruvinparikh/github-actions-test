@@ -1,0 +1,5 @@
+node_modules
+deploy
+coverage
+.github
+Docker

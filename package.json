@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/**/*.js",
-    "fix": "yarn lint --fix",
+    "fix": "npm run lint --fix",
     "prettier": "prettier --write --single-quote true --trailing-comma all --print-width 100"
   },
   "eslintConfig": {
@@ -52,8 +52,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn prettier",
-      "yarn fix"
+      "npm run prettier",
+      "npm run fix"
     ]
   }
 }
