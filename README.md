@@ -10,23 +10,31 @@ Website : https://dhruvinparikh93.github.io/github-actions-test/
 ssh-keygen -t rsa -b 4096 -C "youremailhere@example.com" -N ""
 ```
 
-## Build docker image
+## Build docker image locally
 
 ```bash
 $ docker build -t github-actions-test-image -f "./Docker/Dockerfile" .
 ```
 
-## Run docker image
+## Run locally build docker image
 
 ```bash
 $ docker run --name myname -p 8080:5000 --rm github-actions-test-image:latest
 ```
+
+## Push image to docker hub
 
 ```bash
 $ docker tag github-actions-test docker.io/dhruvingbc/github-actions-test:node-0.0.1
 $ docker tag github-actions-test docker.io/dhruvingbc/github-actions-test:node-latest
 $ docker push docker.io/dhruvingbc/github-actions-test:node-0.0.1
 $ docker push docker.io/dhruvingbc/github-actions-test:latest
+```
+
+## Download and run dockerimage from dockerhub
+
+```bash
+$ docker run --name myname -p 8080:5000 --rm dhruvingbc/github-actions-test:latest
 ```
 
 #### References
