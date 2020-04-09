@@ -41,3 +41,13 @@ jobs:
           FOLDER: build
           CLEAN: true
           SSH: true # SSH must be set to true so the deploy action knows which protocol to deploy with.
+      
+      - name: Deploy to docker
+      - uses: mr-smithers-excellent/docker-build-push@v2
+        with:
+          image: dhruvingbc/github-actions-test
+          tag: node:0.0.${{ GITHUB_RUN_ID }}
+          registry: docker.io
+          dockerfile: Docker/Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
