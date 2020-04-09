@@ -46,7 +46,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v2
         with:
           image: dhruvingbc/github-actions-test
-          tag: node:0.0.${{ GITHUB_RUN_ID }}
+          tag: node:0.0.$GITHUB_RUN_ID
           registry: docker.io
           dockerfile: Docker/Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
